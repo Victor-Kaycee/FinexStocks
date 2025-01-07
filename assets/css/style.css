@@ -507,9 +507,9 @@ img {
   color: var(--text-color);
 }
 
-.feedback-grid:hover {
+/* .feedback-grid:hover {
   transform: translateY(-5px);
-}
+} */
 
 
 
