@@ -1,3 +1,10 @@
+const faqs = document.querySelectorAll(".faq");
+  faqs.forEach(faq => {
+    faq.addEventListener("click", () => {
+      faq.classList.toggle("active");
+    });
+  });
+
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
   navToggle = document.getElementById('nav-toggle'),
@@ -34,6 +41,13 @@ const scrollHeader = () => {
     : header.classList.remove('header-bg')
 }
 window.addEventListener('scroll', scrollHeader)
+
+
+
+gsap.from('.home__title', {x: -100, opacity: 0, delay: 0.5, duration: 1})
+gsap.from('.home__description', {y: -100, opacity: 0, delay: 0.6, duration: 1})
+gsap.from('.home__img', {x: 100, opacity: 0, delay: 0.7, duration: 1})
+gsap.from('.hb', {y: -100, opacity: 0, delay: 0.8, duration: 1})
 
 
 
@@ -86,3 +100,5 @@ $('.features-grids').owlCarousel({
       }
     }
   });
+
+  
