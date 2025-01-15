@@ -7,11 +7,11 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(203, 71%, 60%);
-  --second-color: hsl(277, 56%, 68%);
+  --first-color: #ddad3e;
   --text-color: #1f1f1f;
   --text-color-light: #777;
-  --body-color: hsl(259, 20%, 18%);
+  --body-color: #ecebe9;
+  --white-color: #fff;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -53,7 +53,7 @@ p,span {
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: #ecebe9;
+  background-color: var(--body-color);
   color: var(--text-color);
 }
 
@@ -127,7 +127,7 @@ img {
   @media screen and (max-width: 767px) {
     .nav__menu {
       position: fixed;
-      background-color: #ecebe9;
+      background-color: var(--body-color);
       width: 100%;
       left: 0;
       top: -100%;
@@ -181,7 +181,7 @@ img {
   
   /* Active link */
   .active-link {
-    background: #ddad3e;
+    background: var(--first-color);
     -webkit-background-clip: text;
     color: transparent;
   }
@@ -230,7 +230,7 @@ img {
   
 .about {
     position: relative;
-    background-image: linear-gradient(45deg, rgba(253, 243, 243, 0.4) 30%, rgba(255, 255, 255, .7) 70%), url(../img/video-thumb.png);
+    background-image: linear-gradient(45deg, rgba(241, 240, 240, 0.8) 30%, rgba(255, 255, 255, .4) 70%), url(../img/video-thumb.png);
     background-size: cover;
     background-position: center;
 
@@ -255,7 +255,7 @@ img {
 }
 
 .about__title li .c_home {
-  color: #ddad3e;
+  color: var(--first-color);
   padding-right: 5px;
 }
 
@@ -331,7 +331,7 @@ img {
 
 .modern-grid {
   padding: 20px 40px;
-  background: #fff;
+  background: var(--white-color);
   transition: .5s;
 }
 
@@ -504,7 +504,7 @@ img {
   }
 
   .f__grid-1 p {
-    color: #fff;
+    color: var(--white-color);
   }
   
   .f__grid-1 a {
@@ -517,7 +517,7 @@ img {
   }
   
   .f__ic {
-    background: #fff;
+    background: var(--white-color);
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -539,7 +539,7 @@ img {
   
   .f__grid-2 h3 {
     padding-bottom: 20px;
-    color: #fff;
+    color: var(--white-color);
   }
   
   
@@ -554,12 +554,12 @@ img {
   }
   
   .f__grid-2 li a {
-    color: #fff;
+    color: var(--white-color);
     transition: .5s;
   }
   
   .f__grid-2 li a:hover {
-    color: #fff;
+    color: var(--white-color);
     -webkit-background-clip: text;
   }
   
@@ -572,7 +572,7 @@ img {
   }
 
   .footer__copywright {
-    color: #fff;
+    color: var(--white-color);
   }
   
   .footer__line {

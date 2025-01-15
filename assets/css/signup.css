@@ -1,0 +1,189 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(42, 70%, 55%);
+  --second-color: hsl(277, 56%, 68%);
+  --text-color: #1f1f1f;
+  --text-color-light: #777;
+  --body-color: hsl(259, 20%, 18%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Outfit';
+  --biggest-font-size: 2.25rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: .938rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-fixed: 100;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 1024px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --h2-font-size: 1.5rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+p,span {
+  font-family: "outfit", sans-serif;
+  color: var(--text-color-light);
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: #ecebe9;
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1024px;
+  margin-inline: 4.5rem;
+}
+.main {
+  overflow: hidden; /* For the animations */
+}
+
+.login {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.login-grid {
+  display: flex;
+}
+
+.login-background  {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(45deg, rgba(248, 246, 240, 0.4) 30%, rgb(0, 0, 0, .4) 70%), url(../img/login-img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex: 3;
+}
+
+.login-form {
+  flex: 1;
+  padding: 3rem 0 2rem;
+}
+
+.form-logo {
+  /* text-align: center; */
+  padding-bottom: 30px;
+}
+
+.form-logo img  {
+  width: 150px;
+}
+
+.input-div {
+  border-bottom: 1px solid #666;
+  padding: 20px 0;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  height: 100%;
+}
+
+.input-div input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  background: #ecebe9;
+}
+
+.input-div input::placeholder {
+  color: var(--text-color-light);
+  font-family: var(--body-font);
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.agree {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.agree a {
+  color: var(--first-color);
+  text-decoration: underline;
+}
+
+.sign-in {
+  background: var(--first-color);
+  font-family: var(--body-font);
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.sign-up {
+  text-align: center;
+}
+
+.sign-up span {
+  color: var(--text-color);
+}
+
+.sign-up a {
+  color: var(--first-color);
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .login {
+    overflow: scroll;
+  }  
+
+  .login-grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
