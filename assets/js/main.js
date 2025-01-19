@@ -101,5 +101,18 @@ $('.features-grids').owlCarousel({
     }
   });
 
-  
+  ScrollReveal({
+    // reset: true,
+    distance: '80px',
+    duration: 2000,
+    delay: 200
+  })
+
+  ScrollReveal().reveal(".features-header, .feedback-header, .questions-header, .modern-header, .goal-img", { origin: 'top'})
+
+  ScrollReveal().reveal(".features-grids, .feedback-grids, .grid-2", { origin: 'bottom'})
+
+  ScrollReveal().reveal(".build-content, .safe-content, .account-content, .questions-img, .story-content, .grid-1, .goal-header p, .provide-img, .connect__form, .policies-img", { origin: 'right'})
+
+  ScrollReveal().reveal(".build-img, .safe-img, .account-img, .questions-faq, .story-img, .grid-3, .goal-header h1, .provide-content, .connect-grid, .policies-content", { origin: 'left'})
   
